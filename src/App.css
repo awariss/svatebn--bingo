@@ -2,37 +2,140 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #fff0f5; /* Světlá růžová barva */
+  color: #424242;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input, button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  border: 2px solid #e7e7e7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover {
+  background-color: #e7e7e7;
+}
+
+.tasks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.task-group {
+  background-color: #ffffff; /* Čistá bílá barva */
+  color: #333;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: calc(25% - 40px);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.task {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.checkbox {
+  margin-right: 10px;
+  padding-left: 20px;
+  padding: 5px;
+}
+.help-text{
+  font-style: italic;
+}
+
+@media print {
+  h1 {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 1cm;
+    }
+
+  body {
+    background-color: white;
+    color: black;
+    margin: 0;
+  }
+
+  .App-header {
+    background-color: white;
+    color: black;
+  }
+
+  input, button {
+    display: none;
+  }
+
+  .tasks-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+  }
+
+  .task-group {
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    page-break-inside: avoid;
+    width: 100%;
+    height: 100%;
+    background-image: url('../public/wedding-rings.png'); /* Odkaz na vzor pozadí */
+    background-repeat: no-repeat;
+    background-size: 30%;
+    git remote add origin https://github.com/awariss/svatebn--bingo.git
+  git branch -M main
+  git push -u origin main background-position: center;
+  }
+
+  .task {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0px 20px 0;
+    font-size: 11px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .checkbox {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .help-text{
+    padding-top: 10px;
+    font-size: 11px;
+    margin: 0;
+  }
+
+  p{
+    font-size: 13px;
   }
 }
+
